@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('../photo/미오탱사이트메인화면.png');
+    background-image: url('미오탱사이트메인화면.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

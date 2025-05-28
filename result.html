@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MioTang CamReaction Random Menu Selector</title>
+        <link rel="stylesheet" href="./result.css">
+    </head>
+    <body>
+        <div>
+            <!-- <iframe = #> -->    
+        </div>
+        <a href="#" id="imageLink" target="_blank">
+            <img id="randomImage" src="" alt="_" >    
+        </a>
+        <div class="result-box">
+            <h1 id="randomResult">번</h1>  
+            <p>※이미지 클릭 시 해당 영상으로 이동합니다.</p>  
+        </div>
+        <button class="return-btn" onclick="returnBtn()">< 돌아가기</button>
+        <script>
+            function returnBtn(){
+                window.location.assign(`../index.html`);
+            }
+            const titles = {
+                1: "모찌송",
+                2: "뽀뽀뽀",
+                3: "원더보이",
+                4: "쏙쏙쏙",
+                5: "삐삐",
+                6: "키세스",
+                7: "오빠야",
+                8: "두근두근",
+                9: "살구송",
+                10: "여봉봉",
+                11: "너뿐이야",
+                12: "루",
+                13: "꿈빛파티시엘",
+                14: "만두",
+                15: "귀여워서 미안해",
+                16: "티모",
+                17: "결혼해줄래",
+                18: "퍼퍼퍼큐",
+                19: "다줄게",
+                20: "팬서비스",
+                21: "21학번",
+                22: "어쩜좋아",
+                23: "곰돌이",
+                24: "숫자송",
+                25: "애기야",
+                26: "우유",
+                27: "첫눈에 뿅",
+                28: "윈도우송",
+                29: "오또케송",
+                30: "니꺼내꺼",
+                31: "고양이소리",
+                32: "가가캠리",
+                33: "천사래",
+                34: "오빠바이러스",
+                35: "짠쿵쾅",
+                36: "캠퍼스로망스",
+                37: "U you",
+                38: "알통자랑",
+                39: "밤양갱",
+                40: "귀여운남자",
+            }
+            const params = new URLSearchParams(window.location.search);
+            const num = params.get('num');
+            const title = titles[num];
+
+            document.getElementById('randomResult').innerText=`${num}번 - ${title}`;
+
+            const imageData = {
+                1: {src: 'cam1.png', link: 'https://vod.sooplive.co.kr/player/155660891/catch'},
+                2: {src: 'cam2.png', link: 'https://vod.sooplive.co.kr/player/157301121/catch'},
+                3: {src: 'cam3.png', link: 'https://vod.sooplive.co.kr/player/157115741/catch'},
+                4: {src: 'cam4.png', link: 'https://vod.sooplive.co.kr/player/157747653/catch'},
+                5: {src: 'cam5.png', link: 'https://vod.sooplive.co.kr/player/157465527/catch'},
+                6: {src: 'cam6.png', link: 'https://vod.sooplive.co.kr/player/158220587/catch'},
+                7: {src: 'cam7.png', link: ''},
+                8: {src: 'cam8.png', link: 'https://vod.sooplive.co.kr/player/131171073/catch'},
+                9: {src: 'cam9.png', link: 'https://vod.sooplive.co.kr/player/128515263/catch'},
+                10: {src: 'cam10.png', link: 'https://vod.sooplive.co.kr/player/157028325/catch'},
+                11: {src: 'cam11.png', link: 'https://vod.sooplive.co.kr/player/129183179'},
+                12: {src: 'cam12.png', link: ''},
+                13: {src: 'cam13.png', link: 'https://vod.sooplive.co.kr/player/131171237/catch'},
+                14: {src: 'cam14.png', link: 'https://vod.sooplive.co.kr/player/157403965/catch'},
+                15: {src: 'cam15.png', link: 'https://vod.sooplive.co.kr/player/158559933/catch'},
+                16: {src: 'cam16.png', link: 'https://vod.sooplive.co.kr/player/158220495/catch'},
+                17: {src: 'cam17.png', link: ''},
+                18: {src: 'cam18.png', link: 'https://vod.sooplive.co.kr/player/158187771/catch'},
+                19: {src: 'cam19.png', link: 'https://vod.sooplive.co.kr/player/158298977/catch'},
+                20: {src: 'cam20.png', link: ''},
+                21: {src: 'cam21.png', link: ''},
+                22: {src: 'cam22.png', link: 'https://vod.sooplive.co.kr/player/133481083/catch'},
+                23: {src: 'cam23.png', link: ''},
+                24: {src: 'cam24.png', link: 'https://vod.sooplive.co.kr/player/139454493/catch'},
+                25: {src: 'cam25.png', link: ''},
+                26: {src: 'cam26.png', link: ''},
+                27: {src: 'cam27.png', link: ''},
+                28: {src: 'cam28.png', link: ''},
+                29: {src: 'cam29.png', link: 'https://vod.sooplive.co.kr/player/161022309/catch'},
+                30: {src: 'cam30.png', link: ''},
+                31: {src: 'cam31.png', link: 'https://vod.sooplive.co.kr/player/151054085/catch'},
+                32: {src: 'cam32.png', link: 'https://vod.sooplive.co.kr/player/158314611/catch'},
+                33: {src: 'cam33.png', link: ''},
+                34: {src: 'cam34.png', link: 'https://vod.sooplive.co.kr/player/139368065/catch'},
+                35: {src: 'cam35.png', link: 'https://vod.sooplive.co.kr/player/159915233/catch'},
+                36: {src: 'cam36.png', link: ''},
+                37: {src: 'cam37.png', link: ''},
+                38: {src: 'cam38.png', link: 'https://vod.sooplive.co.kr/player/159958889'},
+                39: {src: 'cam39.png', link: ''},
+                40: {src: 'cam40.png', link: ''},
+            };
+            const data = imageData[num];
+           if (data) {
+    randomImage.src = data.src;
+
+    if (data.link) {
+        imageLink.href = data.link;
+        imageLink.onclick = null; // 기본 동작 유지
+    } else {
+        imageLink.href = "#";
+        imageLink.onclick = function (e) {
+            e.preventDefault(); // 클릭 시 이동 막기
+            alert('해당하는 영상이 존재하지 않습니다.');
+        };
+    }
+    } else {
+        randomImage.alt = '잘못된 번호입니다.';
+        imageLink.alt = '해당하는 영상이 존재하지 않습니다';
+    }
+        </script>
+    </body>
+</html>
