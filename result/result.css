@@ -1,0 +1,59 @@
+body{
+    background-image: url('/./photo/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#randomImage{
+    border-radius: 50px;
+    max-width: 60%;
+    max-height: 60%;
+    margin-top: -100px;
+    box-shadow: 0 6px 10px rgba(175, 173, 173, 0.5);
+    transition: transform 0.25s ease;
+}
+#imageLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.return-btn{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gainsboro;
+    border-radius: 30px;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 6px 10px rgba(182, 186, 187, 0.5);
+    transition: background-color 0.3s ease, transform 0.25s ease;
+}
+.return-btn:hover{
+    box-shadow: 0 6px 10px rgba(175, 173, 173, 0.5);
+    transform: translateY(-2px);
+    background-color: rgb(233, 233, 233);
+}
+.result-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: -180px auto 0 auto; /* 상단 마진만 -270px, 좌우 자동으로 중앙정렬 */
+    width: 700px;
+    border-radius: 30px;
+    box-shadow: 0 6px 10px rgba(182, 186, 187, 0.5);
+}
+p{
+    margin-top: -15px;
+    color: gray;
+}
+#randomImage:hover{
+    box-shadow: 0 6px 10px rgba(175, 173, 173, 0.5);
+    transform: translateY(-3px);
+}
